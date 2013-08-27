@@ -9,7 +9,7 @@ public class Commands {
 			String[] args, String arg) {
 		if(arg.equals("search") || arg.equals("find"))
 		{
-			
+			Compass.command(caller, args);
 		}
 		return false;
 	}
