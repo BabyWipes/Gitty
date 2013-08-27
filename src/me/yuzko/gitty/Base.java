@@ -49,7 +49,7 @@ public class Base extends JavaPlugin
 
 			return false;
 		else
-			return Commands.method((Player)sender, cmd, commandLabel.toLowerCase(), args, commandLabel);
+			return Commands.method((Player)sender, cmd, commandLabel.toLowerCase(), args);
 	}
 	
 	public static String name = "Base";
