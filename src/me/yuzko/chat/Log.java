@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class Log implements Listener 
@@ -17,8 +18,7 @@ public class Log implements Listener
 
 		if(!(p.hasPlayedBefore()))
 		{
-			p.sendMessage(ChatColor.DARK_GRAY + "[Join] " + ChatColor.GRAY + 
-					"Welcome back!");
+			Bukkit.broadcastMessage(ChatColor.DARK_GRAY + "[Join] " + ChatColor.GRAY + name);
 		}
 		else
 			Bukkit.broadcastMessage(ChatColor.BLUE + "[Welcome] " + ChatColor.LIGHT_PURPLE
@@ -27,6 +27,14 @@ public class Log implements Listener
 		p.getInventory().addItem(new ItemStack(Material.STONE_AXE, 1));
 		p.getInventory().addItem(new ItemStack(Material.STONE_PICKAXE, 1));
 		p.getInventory().addItem(new ItemStack(Material.COOKED_CHICKEN, 5));
+	}
+	
+	public void onQuit(PlayerQuitEvent e)
+	{
+		Player p = e.getPlayer();
+		String name = p.getName();
+		
+		Bukkit.broadcastMessage(ChatColor.DARK_GRAY + "[Quit] " + ChatColor.GRAY + name);
 	}
 
 }
