@@ -26,6 +26,13 @@ public class Compass {
 			}
 			else
 			{
+				if(!(caller.getInventory().getItemInHand().getTypeId() == /compassTODO))
+				{
+					caller.sendMessage(ChatColor.DARK_RED + "[Compass]" + ChatColor.RED 
+					+ ChatColor.RED + "You need to be holding a compass to use this command);
+				}
+				else
+				{
 
 				int x = Bukkit.getPlayer(args[0]).getLocation().getBlockX();
 				int y = Bukkit.getPlayer(args[0]).getLocation().getBlockY();
@@ -34,6 +41,7 @@ public class Compass {
 						+ args[0] + ChatColor.GREEN + " is located at; " + ChatColor.DARK_GREEN + x 
 						+ ChatColor.GREEN + ", " + ChatColor.DARK_GREEN + y + ChatColor.GREEN + 
 						", " + ChatColor.DARK_GREEN + z);
+				}
 			}
 		}
 	}
