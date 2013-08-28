@@ -7,6 +7,10 @@ import org.bukkit.entity.Player;
 
 public class Compass {
 
+	public Compass
+	{
+	}
+
 	public static void command(Player caller, String[] args) {
 		if(args.length < 1)
 		{
