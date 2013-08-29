@@ -2,8 +2,6 @@ package me.yuzko.gitty;
 
 import java.util.logging.Logger;
 
-import me.yuzko.chat.Log;
-
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -17,7 +15,6 @@ public class Base extends JavaPlugin
 	
 {
 	public static Logger logger = Logger.getLogger("Minecraft");
-	public final Log log = new Log();
 
 	public Base(Base plugin)
 	{
@@ -30,7 +27,6 @@ public class Base extends JavaPlugin
 			plugin = this;
 		logger.info("[YMod] Plugin enabled!");
 		PluginManager pm = this.getServer().getPluginManager();
-		pm.registerEvents(this.log, this);
 
 	}
 	
