@@ -49,7 +49,8 @@ public class DonatorChat
 					}
 					else
 					{
-						p.sendMessage(msg);
+						p.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "DChat"
+								+ ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + msg);
 					}
 				}
 			}
